@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+    <link rel="icon" type="image/ico" href="img/icono.ico"/>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="cerrarSesionContainer">  
+                <img id="fotoUsuario" alt="Foto del usuario" src="">
+                <button id="botonCerrarSesion">Cerrar Sesión</button>
+                <button id="volverAlInicioBtn" >Volver al inicio</button>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        
+            <h2>Añade y elimina las aficiones que quieras</h2>
+
+            <div id="aficionesDelUsuarioContainer">  
+                <label for="aficionesDelUsuario">Aficiones que quieres dejar de tener:</label>
+
+            </div>
+            <div id="aficionesPorAñadirContainer">  
+                <label for= "aficionesPorAñadir"> Aficiones que puedes añadir: </label>
+               
+            </div>
+            
+            <button id="botonActualizarAficiones" type="button">Actualizar aficiones</button>
+
+    </main>
+    
+    <footer>
+        <p>© 2024 VitoMaite. Todos los derechos reservados.</p>
+    </footer>
+       <script src="js/gestionarAficiones.js" ></script>
+    <!--para poder usar SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>

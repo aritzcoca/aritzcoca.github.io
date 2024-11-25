@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bienvenido</title>
+        <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+        <link rel="icon" type="image/ico" href="img/icono.ico"/>
+         
+    </head>
+    <body>
+
+        <header>
+            <nav>
+                
+                    <div 
+                       
+                        id="cerrarSesionContainer">  
+                        <a id="mensajeBienvenida"></a>
+                        <img id="fotoUsuario" alt="Foto del usuario" src =''>
+                        <button id="botonCerrarSesion">Cerrar Sesión</button>
+                    </div>
+                
+            </nav>
+        </header>
+    
+        <main>
+        <!-- Añadir los botones de editar perfil, mis likes y buscar -->
+        <div class="botonesLogeado">
+           
+            <button id="misLikesBtn">Mostrar mis likes</button>
+            <button id="buscarBtn">Buscar</button>
+            <button id="editarPerfilBtn">Editar Perfil</button>
+        </div>
+
+       
+
+        <!-- Contenedor para mostrar los likes -->
+        <div id="contenedorLikes"></div>
+        </main>
+    
+        <footer>
+            <p>© 2024 VitoMaite. Todos los derechos reservados.</p>
+        </footer>
+
+        <script src="js/Logeado.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+    </body>
+</html>

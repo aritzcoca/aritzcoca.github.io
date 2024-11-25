@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>VitoMaite</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+        <link rel="icon" type="image/ico" href="img/icono.ico"/>
+        
+    <body>
+        <header>
+            <nav>
+                
+                    
+                            <div>Accede a tu cuenta</div>
+                    
+                        <a href="index.html">Iniciar Sesion</a>
+                    
+            </nav>
+        </header> 
+
+        <main>         
+            <div class="container">
+                <h1>Buscar usuario</h1>
+                <form id="buscarUsuarioForm">
+                    <!-- Género -->
+                    <div class="genero-container">
+                        <label for="genero">Género:</label>
+                        <select id="genero" name="genero">
+                            <option value="">Seleccione una opción</option>
+                            <option value="H">H</option>
+                            <option value="M">M</option>
+                        </select>
+                    </div>
+
+                    <!-- Edad -->
+                    <div class="edad-container">
+                        <div>
+                            <label for="edadMin">Edad mínima:</label>
+                            <select id="edadMin"></select>
+                            </div>
+                        <div>
+                            <label for="edadMax">Edad máxima:</label>
+                            <select id="edadMax"></select>
+                        </div>
+                    </div>
+
+                    <!-- Ciudad -->
+                    <div class="ciudad-container">
+                        <label for="ciudad">Ciudad:</label>
+                        <select id="ciudad" name="ciudad">
+                            <option value="">Selecciona una ciudad</option>
+                            <option value="Vitoria">Vitoria</option>
+                            <option value="Bilbao">Bilbao</option>
+                            <option value="Donosti">Donosti</option>
+                        </select>
+                    </div>
+                    <br>
+
+
+                    <!--El uso de type="submit" en un botón puede hacer que el
+                    formulario se envíe y recargue la página, lo que interrumpe 
+                    cualquier operación asíncrona en ejecución, como la conexión 
+                    con IndexedDB. Para evitar esto, puedes cambiar el botón 
+                    a type="button", o si necesitas mantener el tipo submit, 
+                    puedes prevenir el comportamiento predeterminado 
+                    en el código
+                    
+                    document.getElementById("tuBoton").addEventListener("click", function(event) {
+                        event.preventDefault();
+                        mostrarUsuarios();
+                        });
+                    -->
+                    <button id="buscarBtn" type="button">Buscar usuarios</button>
+                    <button id="cancelarBtn" type="button">Cancelar</button>
+
+                </form>
+
+                <!-- Contenedor para mostrar los usuarios -->
+                <div id="contenedorUsuarios"></div>
+
+            </div>  
+
+        </main>
+
+
+        <footer>
+            <p>© 2024 VitoMaite. Todos los derechos reservados.</p>
+        </footer>
+
+        <script src="js/BusquedaNoRegistrado.js"></script>
+
+        <!--para poder user SweetAlert-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    </body>
+</html>
+

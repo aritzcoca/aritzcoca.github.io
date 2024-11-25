@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+/* Reseteo de márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos del body con imagen de fondo */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../img/VitoMaiteFondo (Presentación).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+/* Header principal */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Título a la izquierda, botones a la derecha */
+  background-color: rgba(255, 165, 0, 0.9);
+  padding: 15px 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+/* Botón de retorno en el header */
+#botonReturn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 10px 15px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 20px; /* Espacio entre el botón de retorno y el título */
+}
+
+#botonReturn:hover {
+  background-color: #FFA500;
+  color: #333;
+}
+/* Estilo del título (div) en el header */
+header div {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+/* Navbar estilo de botones */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+header nav ul li button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding: 10px 20px;
+  background-color: #ff8c00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header nav ul li button:hover {
+  background-color: #FFA500;
+  color: #333;
+}
+
+/* Main contenido principal */
+main {
+   margin: 20px auto;
+  width: 90%;
+  min-height: 80vh;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  text-align: center;
+}
+main h1 {
+  font-size: 36px; /* Tamaño grande para el título */
+  font-family: 'Poppins', sans-serif; /* Fuente especial para el título */
+  font-weight: 600;
+  color: #333; /* Color oscuro */
+  margin-bottom: 15px;
+}
+/* Botones en main */
+main button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #FFA500;
+  color: white;
+  border: 2px solid black; /* Borde blanco */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px 0;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+main button:hover {
+  background-color: #ff8c00; /* Color más oscuro al pasar el ratón */
+}
+select {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #FFA500;
+  padding: 10px 15px;
+  border: 2px solid #ff8c00;
+  border-radius: 8px;
+  appearance: none; /* Elimina el estilo predeterminado del navegador */
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Cambia el color de fondo y el borde al enfocar o al hacer clic */
+select:focus,
+select:hover {
+  background-color: #ff8c00;
+  border-color: #FFA500;
+  color: #fff;
+}
+
+/* Estilo para el icono de flecha */
+select::-ms-expand {
+  display: none; /* Elimina la flecha en IE */
+}
+
+/* Contenedor del select para agregar el icono de flecha personalizado */
+.select-container {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.select-container::after {
+  content: "▼"; /* Icono de flecha personalizado */
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Evita que el icono interfiera con el menú desplegable */
+}
+/* Contenedor de la pregunta y respuesta */
+label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 2px solid #FFA500;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto al enfocar (focus) */
+input[type="text"]:focus {
+  border-color: #ff8c00;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Placeholder estilizado */
+input[type="text"]::placeholder {
+  color: #999;
+  font-style: italic;
+}
+/* Contenedor del perfil de usuario */
+.perfil-usuario {
+  width: 250px;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #FFA500;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil-usuario:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de perfil */
+.foto-perfil {
+  width: 100px;    
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #FFA500;
+}
+
+/* Información del usuario */
+.info-usuario .nickname {
+  font-size: 20px;
+  color: #333;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+.info-usuario .ciudad,
+.info-usuario .edad {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Botón Ver más */
+.ver-mas {
+  margin-top: 10px;
+  padding: 8px 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #FFA500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ver-mas:hover {
+  background-color: #ff8c00;
+}
+
+/* Información adicional */
+.detalles .aficiones {
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Botón Ver menos */
+.ver-menos, .dar-like {
+  padding: 8px 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #FFA500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.ver-menos:hover, .dar-like:hover {
+  background-color: #ff8c00;
+}
+/* Contenedor de la pregunta */
+.pregunta {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  width: 300px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Botón desplegable */
+.desplegar {
+  width: 100%;
+  padding: 10px;
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.desplegar:hover {
+  background-color: #ff8c00;
+}
+
+/* Opciones del desplegable */
+.opciones {
+  border: 2px solid #FFA500;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+/* Checkbox */
+.opciones label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.opciones input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* Estilo general del perfil */
+.perfil {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #FFA500;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Imagen de perfil */
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid #FFA500;
+}
+
+/* Información del usuario */
+.info-usuario {
+  color: #333;
+}
+
+/* Estilo para el nombre */
+.info-usuario .nombre {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Estilo para la edad, ciudad y aficiones */
+.info-usuario .edad,
+.info-usuario .ciudad,
+.info-usuario .aficiones {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+.pregunta-edad {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  width: 200px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #FFA500;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+.subir-foto {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  width: 300px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="file"] {
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid #FFA500;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.vista-previa {
+  margin-top: 15px;
+}
+
+#preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFA500;
+}
+/* Footer principal */
+footer {
+  background-color: #FFA500;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Estilo para las etiquetas */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilo común para los campos de entrada */
+input[type="email"],
+input[type="number"]#edad,
+input[type="number"]#altura,
+input[type="password"]#password1,
+input[type="password"]#password2 {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #FFA500; /* Borde naranja */
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Efecto de enfoque para los campos de entrada */
+input[type="email"]:focus,
+input[type="number"]#edad:focus,
+input[type="number"]#altura:focus,
+input[type="password"]#password1:focus,
+input[type="password"]#password2:focus {
+  border-color: #FF8C00; /* Borde más oscuro al enfocarse */
+}
+/* Estilo del mensaje de login */
+#mensaje {
+  margin-top: 15px;
+  color: #d9534f; /* Color rojo para mensajes de error */
+  font-size: 14px;
+}
+
+/* Estilo del enlace de registro */
+#registrar {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+#registrar a {
+  color: #FFA500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#registrar a:hover {
+  color: #ff8c00;
+}
+/* Estilo para la caja de contraseña */
+input[type="password"] {
+  width: calc(100% - 20px); /* Ajuste del ancho con espacio interior */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #FFA500; /* Borde naranja */
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Efecto de enfoque para la caja de contraseña */
+input[type="password"]:focus {
+  border-color: #FF8C00; /* Borde más oscuro al enfocarse */
+}
+
+/* Estilo del enlace de navegación */
+.navbar-items a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: transparent; /* Fondo transparente por defecto */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto hover en el enlace */
+.navbar-items a:hover {
+  background-color: #ff8c00; /* Color naranja oscuro al pasar el ratón */
+  color: #fff; /* Asegura que el texto se mantenga visible */
+}
+
+/* Estilo para hacer que el enlace se destaque más */
+.navbar-items a:focus,
+.navbar-items a:active {
+  outline: none; /* Elimina el borde predeterminado */
+  background-color: #e67300; /* Color más oscuro al hacer clic */
+}
+
+.navbar-items a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #FFA500; /* Color de fondo naranja */
+  padding: 10px 20px; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+.navbar-items a:hover {
+  background-color: #ff8c00; /* Color más oscuro al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+/* Efecto de enfoque para accesibilidad */
+.navbar-items a:focus {
+  outline: none;
+  background-color: #e67300; /* Color más oscuro al enfocar */
+}
+
+/* Estilo del botón en la navbar */
+#botonCerrarSesion {
+    background-color: #ff9800; /* Color de fondo naranja */
+    color: white; /* Color de las letras */
+    border: none; /* Sin borde */
+    padding: 8px 16px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Puntero de mano */
+    font-size: 14px; /* Tamaño de la fuente */
+    transition: background-color 0.3s; /* Transición al pasar el ratón */
+}
+
+#botonCerrarSesion:hover {
+    background-color: #e68900; /* Color naranja más oscuro al pasar el ratón */
+}
+
+/* Estilo del botón en la navbar */
+#volverAlInicioBtn {
+    background-color: #ff9800; /* Color de fondo naranja */
+    color: white; /* Color de las letras */
+    border: none; /* Sin borde */
+    padding: 8px 16px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Puntero de mano */
+    font-size: 14px; /* Tamaño de la fuente */
+    transition: background-color 0.3s; /* Transición al pasar el ratón */
+}
+
+#volverAlInicioBtn:hover {
+    background-color: #e68900; /* Color naranja más oscuro al pasar el ratón */
+}
+
+/* Ajustar el tamaño del mapa */
+        #map {
+            height: 600px; /* Altura del mapa */
+            width: 800px;  /* Anchura del mapa */
+            border: 1px solid #ccc; /* Bordes para diferenciarlo */
+        }
+
+
+        /* Centramos el mapa en la página (opcional) */
+        .map-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura de la pantalla */
+        }
+
+        
+ 
+ .dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/*
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+*/
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            padding: 10px;
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ff8c00;
+            min-width: 200px;
+            border: 1px solid #ccc;
+            z-index: 1;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-content label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .dropdown.open .dropdown-content {
+            display: block;
+        }
+.show {display: block;}

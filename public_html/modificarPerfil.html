@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar usuario por Aficiones</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+    <link rel="icon" type="image/ico" href="img/icono.ico"/>
+    
+</head>
+   <header>
+        <nav>
+            <div id="cerrarSesionContainer">  
+                <img id="fotoUsuario" alt="Foto del usuario" src="">
+                <button id="botonCerrarSesion">Cerrar Sesión</button>
+                <button id="volverAlInicioBtn" >Volver al inicio</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+                <div class="container">
+                <h1>Editar perfil</h1>
+                <form id="formularioLogin">
+                    
+                    <label for="fotoEquipo">Subir foto del equipo:</label>
+                    <input type="file" id="fotoEquipo" name="fotoEquipo" accept="image/*">
+                    <div id="imageContainer"></div>
+                    
+                    
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="radio" id="Vitoria" name="ciudad" >
+                    <label for="Vitoria">Vitoria</label>
+                    <input type="radio" id="Bilbao" name="ciudad" >
+                    <label for="Bilbao">Bilbao</label>
+                    <input type="radio" id="Donosti" name="ciudad" >
+                    <label for="Donostia">Donostia</label>
+
+                  
+                    <button type="button" id="botonGuardarCambios"> Guardar cambios </button>
+                </form>
+             
+            </div> 
+        
+
+    </main>
+        <footer>
+        <p>© 2024 VitoMaite. Todos los derechos reservados.</p>
+    </footer>
+       <script src="js/modificarPerfil.js" ></script>
+    <!--para poder usar SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>

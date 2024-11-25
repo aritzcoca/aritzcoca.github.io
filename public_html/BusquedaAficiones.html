@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar usuario por Aficiones</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+    <link rel="icon" type="image/ico" href="img/icono.ico"/>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="cerrarSesionContainer">  
+                <img id="fotoUsuario" alt="Foto del usuario" src="">
+                <button id="botonCerrarSesion">Cerrar Sesión</button>
+                <button id="volverAlInicioBtn" >Volver al inicio</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="dropdown" id="dropdown">
+        <button class="dropdown-button" id="dropdownButton">Filtra por aficiones</button>
+        <div class="dropdown-content" id="dropdownContent"></div>
+
+        
+    </div>
+        <div>
+            
+                        <button id="botonBuscar" type="button">Buscar usuarios</button>
+                        
+        </div>
+        
+        
+        <div id="contenedorUsuarios"></div>
+
+    </main>
+
+    <footer>
+        <p>© 2024 VitoMaite. Todos los derechos reservados.</p>
+    </footer>
+       <script src="js/BusquedaAficiones.js" ></script>
+    <!--para poder usar SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>

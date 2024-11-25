@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar usuario por Aficiones</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+    <link rel="icon" type="image/ico" href="img/icono.ico"/>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="cerrarSesionContainer">  
+                <img id="fotoUsuario" alt="Foto del usuario" src="">
+                <button id="botonCerrarSesion">Cerrar Sesión</button>
+                <button id="volverAlInicioBtn" >Volver al inicio</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="map-container">
+            
+        <div id="map"></div>
+        
+        </div>
+        <div id="slider-container">
+            <label for="radius-slider">Ajustar radio de búsqueda (km):</label>
+            <input type="range" id="radius-slider" min="0.05" max="10" value="1" step="0.05">
+            <span id="radius-value">1</span> km
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 VitoMaite. Todos los derechos reservados.</p>
+    </footer>
+       <script src="js/BusquedaGeolocalizada.js"></script>
+    <!--para poder usar SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo64rkr6TR-RqlV-pJOnRrp0LcdQOAwVU&callback=initMap" async defer></script>
+
+</body>
+</html>
